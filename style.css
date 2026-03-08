@@ -1,0 +1,112 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Khmer OS Battambang',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:radial-gradient(circle at bottom,#1b0033,#000);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* center container */
+
+.center{
+text-align:center;
+}
+
+/* stars */
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.3}
+to{opacity:1}
+}
+
+/* gift */
+
+#gift{
+font-size:90px;
+cursor:pointer;
+animation:float 2s infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+}
+
+/* button */
+
+#openBtn{
+margin-top:20px;
+padding:15px 45px;
+border:none;
+border-radius:40px;
+font-size:20px;
+cursor:pointer;
+background:linear-gradient(45deg,#ff0066,#ff6699);
+color:white;
+box-shadow:0 0 25px #ff3366;
+transition:0.3s;
+}
+
+#openBtn:hover{
+transform:scale(1.1);
+}
+
+/* message */
+
+#message{
+display:none;
+max-width:650px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
+line-height:1.8;
+font-size:22px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+margin-top:20px;
+}
+
+/* hearts */
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh)}
+}
+
+/* fireworks */
+
+.fire{
+position:absolute;
+font-size:20px;
+animation:explode 1s linear forwards;
+}
+
+@keyframes explode{
+0%{transform:scale(0);opacity:1;}
+100%{transform:scale(3);opacity:0;}
+}
